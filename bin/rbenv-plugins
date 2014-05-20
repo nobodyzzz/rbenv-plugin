@@ -11,10 +11,7 @@ export RBENV_PLUGIN_VERSION="0.0.2"
 export RBENV_PLUGIN_BY="Mark Van de Vyver <mark@taqtiqa.com>"
 export RBENV_PLUGIN_SOURCE="https://github.com/taqtiqa-mark/rbenv-$RBENV_PLUGIN_NAME"
 
-cd $RBENV_ROOT/plugins/rbenv-plugin/bin
-. rbenv-path-env
-. rbenv-path-shared
-cd - >/dev/null
+source $RBENV_ROOT/plugins/rbenv-plugin/bin/rbenv-plugin-env
 
 # Provide rbenv completions
 if [ "$1" = "--complete" ]; then
