@@ -28,10 +28,7 @@ if [ "$1" = "--complete" ]; then
   exit
 fi
 
-cd $RBENV_ROOT/plugins/rbenv-plugin/bin
-. rbenv-path-env
-. rbenv-path-shared
-cd - >/dev/null
+source $RBENV_ROOT/plugins/rbenv-plugin/bin/rbenv-plugin-env
 
 indent_output() {
   while read data; do
