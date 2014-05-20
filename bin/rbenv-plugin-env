@@ -23,9 +23,3 @@ if [ "$1" = "version" ] || [ "$1" = "--version" ] ; then
   echo $RBENV_PLUGIN_SOURCE
   exit
 fi
-
-# Guard for the case this plugin is invoked directly (i.e. outside of rbenv).
-# Example an rbenv installer script
-if [ -d "${RBENV_ROOT}/plugins/rbenv-path" ]; then
-  ${RBENV_ROOT}/plugins/rbenv-path/bin/rbenv-path-append ${RBENV_PLUGIN_ROOT}/bin ${RBENV_ROOT}/bin
-fi
