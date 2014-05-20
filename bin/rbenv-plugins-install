@@ -22,10 +22,7 @@ if [ $# -eq 0 ] || [ $# -gt 2 ] || [ "x$1" = "xall" ]; then
   exit 1
 fi
 
-cd $RBENV_ROOT/plugins/rbenv-plugin/bin
-. rbenv-path-env
-. rbenv-path-shared
-cd - >/dev/null
+source $RBENV_ROOT/plugins/rbenv-plugin/bin/rbenv-plugin-env
 
 # Install plugins:
 
